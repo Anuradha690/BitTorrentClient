@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script >
+        function buttonClick(){
+            let h1ele= document.getElementById('h1_element');
+            h1ele.firstChild.nodeValue='Hi i am Anu';
+            h1ele.style.color='blue';
+            
+            let p_elements= document.getElementsByTagName('p');
+            for(let p_element of p_elements){
+                p_element.style.color='green';
+                //p_element.style.backgroundColor='gray';
+            }
+        }    
+
+        function button2Click(){
+            let pelementinDev = document.querySelectorAll('div p');
+            for(let pele_div of pelementinDev){
+                pele_div.style.color='red';
+            }
+        }
+
+        function buttonThree(){
+            let class_name = document.getElementsByClassName('pcustome');
+            class_name.style.color='blue';
+        }
+
+        function querySelector(){
+            let specialP=document.querySelector('#h1_element');
+            specialP.style.color='green';
+        }
+
+    </script>
+
+</head>
+<body>
+    <h1 id="h1_element">Well Come To Web Development</h1>
+    <h2>I am new to javascript and web development. Please help me god</h2>
+    
+    <div>
+        <p>This is the content of display in a document1</p>
+        <div>
+            <p>This is the content of display in a document2</p>
+        </div>
+    </div>
+
+        <p>This is the content of display in a document3</p>
+
+    <div class="pcustome">
+        <p>This is class paragraph</p>
+    </div>
+  
+    <button onclick="buttonClick()">Button1</button>
+    <button onclick="button2Click()">Button2</button>
+    <button onclick="buttonThree()">Button3</button>
+    <button onclick="querySelector()">Button4</button>
+</body>
+</html>
